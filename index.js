@@ -19,18 +19,28 @@ $(document).ready(function() {
     $("#start").click(function() {
         compteur = setInterval(start, 1000);
         start();
+        $("#start").hide();
+        $("#reset").hide();
+        $("#pause").show();
     });
 
     $("#pause").click(function() {
         pause();
+        $("#pause").hide();
+        $("#start").show();
+        $("#reset").show();
     });
 
     $("#stop").click(function() {
         stop();
+        $("#pause").hide();
+        $("#start").show();
     });
 
     $("#reset").click(function() {
         reset();
+        $("#pause").hide();
+        $("#start").show();
     });
 
 
